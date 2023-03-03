@@ -1,0 +1,101 @@
+.products {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 18.5px;
+    }
+  
+    &__title {
+      display: inline-block;
+      margin: 0 auto 6px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+      text-align: center;
+  
+      &-text {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9f9f9f;
+        margin: 0 auto 48px;
+      }
+    }
+    &__decoration:hover .decoration {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+  
+      background-color: rgba(33, 22, 22, 0.685);
+  
+      z-index: 2;
+    }
+  
+    &__decoration {
+      display: flex;
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+    }
+  
+    &__item {
+      max-width: 360px;
+      min-width: 270px;
+      width: 100%;
+      background: #f8f8f8;
+      margin-bottom: 30px;
+    }
+    &__item-body {
+      padding: 25px 28px 20px 16px;
+    }
+  
+    &__heading {
+      margin-bottom: 12px;
+      font-family: Lato;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+  
+    &__text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+  
+      color: #5d5d5d;
+    }
+  
+    &__text--red {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 18px;
+      color: $dark-pink;
+    }
+  
+    &__link {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 auto 95px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      background: $dark-pink;
+      color: #ffffff;
+      padding: 14.5px 38.5px;
+  
+      &:hover {
+        box-sizing: border-box;
+        background: inherit;
+        color: $dark-pink;
+        outline: 1px solid $dark-pink;
+      }
+    }
+  }

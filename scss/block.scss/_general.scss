@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1.15px;
+  
+    color: #5d5d5d;
+  }
+  
+  
+  
+  .container {
+    max-width: 1138px;
+    width: 100%;
+    margin: 0 auto;
+  
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__feedback {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 448px;
+    }
+  
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &--large {
+      display: flex;
+      max-width: 1600px;
+    }
+  }
