@@ -20,7 +20,7 @@
       line-height: 24px;
       text-align: center;
   
-      color: #222224;
+      color: $dark-blue;
     }
   
     &__heading {
@@ -85,11 +85,11 @@
   
     &__input:focus {
       border: 0px;
-      color: #f16d7f;
+      color: $dark-pink;
     }
   
     &__button {
-      background: #f16d7f;
+      background: $dark-pink;
       padding: 16px 22px;
   
       font-style: normal;

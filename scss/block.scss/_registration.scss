@@ -184,9 +184,9 @@
   display: block;
   fill: none;
   &--color {
-    fill: pink;
+    fill: $pink;
     &-stroke {
-      stroke: pink;
+      stroke: $pink;
       stroke-linejoin: round;
     }
   }
@@ -199,9 +199,9 @@
   &:hover {
     fill: rgb(255, 255, 255);
     &--color {
-      fill: pink;
+      fill: $pink;
       &-stroke {
-        stroke: pink;
+        stroke: $pink;
         stroke-linejoin: round;
       }
     }
