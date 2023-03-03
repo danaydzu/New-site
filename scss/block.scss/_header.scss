@@ -1,0 +1,35 @@
+
+
+.header {
+    background: $dark-blue;
+  
+    &__wrapaper {
+      display: flex;
+      min-height: 74px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &__menu-button {
+      @extend %header__button-link;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  
+    &__backet-link {
+      @extend %header__button-link;
+    }
+  
+    &__person-link {
+      @extend %header__button-link;
+    }
+  
+    &__logo {
+      margin: 0 34px 0 0;
+    }
+}
+
+
+.header {
+  position: relative;
+}

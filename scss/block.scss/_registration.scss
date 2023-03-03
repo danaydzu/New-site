@@ -1,0 +1,209 @@
+.registration {
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #f16d7f;
+  }
+  &__title-wrap {
+    padding-top: 59px;
+    min-height: 148px;
+
+    background: #f8f3f4;
+  }
+  &__fields-heading,
+  &__check-heading {
+    @extend %visually-hidden;
+  }
+
+  &__wrap {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__fields {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+
+    &-mini-heading {
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 19px;
+      margin-bottom: 20px;
+      color: #222222;
+    }
+
+    &-input {
+      font-family: "Lato";
+      padding: 14px 17px;
+      margin-bottom: 36px;
+      border: 1px solid #f1e4e6;
+      font-weight: 200;
+      font-size: 13px;
+      line-height: 16px;
+      color: #222222;
+    }
+    &-input:focus,
+    &-input:hover {
+      border: 1px solid #f16d7f;
+    }
+
+    &-input::placeholder {
+      color: #b1b1b1;
+    }
+
+    &-radio {
+      display: none;
+    }
+
+    &-label::before {
+      content: " ";
+      width: 12px;
+      height: 12px;
+      margin-right: 12px;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid #f1e4e6;
+      border-radius: 50px;
+    }
+
+    &-radio:checked + &-label::before {
+      background-image: url(/img/Vector.svg);
+      background-size: cover;
+    }
+    &-radio-wrap {
+      display: flex;
+      margin-bottom: 34px;
+    }
+    &-label {
+      display: flex;
+      margin-right: 12px;
+
+      font-size: 11px;
+      line-height: 13px;
+      font-weight: 200;
+
+      color: #000000;
+    }
+
+    &-text {
+      color: #b1b1b1;
+      font-weight: 200;
+      font-size: 13px;
+      line-height: 16px;
+      margin-bottom: 39px;
+    }
+
+    &-btn::after {
+      content: "  ";
+      margin-left: 20px;
+      background-image: url(/img/arrow.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 10px;
+      align-self: center;
+    }
+
+    &-btn {
+      display: flex;
+      background-color: $dark-pink;
+      padding: 16px 24px 16px 29px;
+
+      width: fit-content;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+  }
+
+  &__check {
+    display: flex;
+    flex-direction: column;
+    max-width: 652px;
+    &-mini-heading {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+      /* identical to box height */
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    &-text {
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+
+      color: #000000;
+      margin-bottom: 21px;
+    }
+
+    &-wrap {
+      margin-bottom: 16px;
+    }
+
+    &-label {
+      display: flex;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+
+      color: #000000;
+    }
+
+    &-input {
+      display: none;
+    }
+    &-input:checked + &-label::before {
+      content: "";
+      margin: auto 12px 0 0;
+      background-repeat: no-repeat;
+      height: 16px;
+      width: 20px;
+
+      background-image: url(/img/Vector.svg);
+    }
+  }
+}
+
+.decoration__add {
+  display: none;
+}
+
+.decoration:hover .decoration__add {
+  display: block;
+  fill: none;
+  &--color {
+    fill: pink;
+    &-stroke {
+      stroke: pink;
+      stroke-linejoin: round;
+    }
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    fill: rgb(255, 255, 255);
+    &--color {
+      fill: pink;
+      &-stroke {
+        stroke: pink;
+        stroke-linejoin: round;
+      }
+    }
+  }
+}
