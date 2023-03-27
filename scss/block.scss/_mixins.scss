@@ -12,15 +12,40 @@
   }
   
   %header__button-link {
-    margin: 0 34px 0 0;
+    margin: auto 5px 0 29px;
+    
   }
 
   @mixin font($size:1em,$height:1em,$weight:400,$style:normal){
     font-size: $size;
     line-height:$height;
-    font-weight: 400;
+    font-weight: $weight;
     font-style: $style;
 
 
 
   }
+
+  @mixin tablet($width:768px){
+
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+
+  
+  @mixin mobile($width:375px){
+
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+  @mixin desktop($width:1600px){
+
+    @media (min-width: $width){
+      @content;
+
+    }
+
+  }
+

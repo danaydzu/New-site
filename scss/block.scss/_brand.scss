@@ -1,65 +1,172 @@
 .brand {
-    background: $pink;
+  box-sizing: border-box;
+
+  background: $pink;
+  display: flex;
+  margin: 0 0 3.9375vw 0;
+  justify-content: center;
+
+  @include tablet() {
+    margin-bottom: 2.6vw;
+  }
+
+  @include mobile() {
+    margin-bottom: 64px;
+  }
+
+  &__title-wrapaper {
     display: flex;
-    margin: 0 0 63px 0;
-  
-    &__title-wrapaper {
-      display: flex;
-      align-items: center;
-      max-width: 800px;
+    align-items: center;
+    padding-left: 5.3%;
+
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: auto;
+    font-size: 100%;
+
+    @include tablet() {
       width: 100%;
-      box-sizing: border-box;
-      padding: 0 0 0 91px;
     }
-  
-    &__title {
-      font-style: normal;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 58px;
-      text-transform: uppercase;
-      color: #222222;
+
+
+    @include mobile {
+      margin-left: 0;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
     }
-  
-    &__title-wrapaper::before {
-      content: "";
-      margin-right: 16px;
-  
-      height: 92px;
-      width: 12px;
-  
-      background: $dark-pink;
+  }
+
+  @include mobile() {
+    padding-left: 0;
+    padding: 40vw 0;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vw;
+
+    line-height: 3vw;
+    text-transform: uppercase;
+    color: #222222;
+
+    margin-right: auto;
+
+    @include tablet(1024px) {
+      @include font(30px, 30px, 700);
     }
-  
-    &__subtitle {
-      display: block;
-  
-      font-size: 32px;
+
+    @include desktop() {
+      @include font(48px, 58px, 700);
+    }
+
+    @include tablet() {
+      font-size: 3.9vw;
+      margin-right: 4.2vw;
+      line-height: 3.9vw;
+    }
+    @include tablet(480px){
+      font-size: 19px; 
+
+    }
+
+    @include mobile() {
+      margin-right: 0;
+      font-size: 10.1vw;
+      line-height: 9.4vw;
+    }
+  }
+
+  &__title-wrapaper::before {
+    content: "";
+    margin-right: 16px;
+    height: 91px ;
+    width: 12px;
+
+
+    background: $dark-pink;
+
+    @include tablet() {
+      margin-left: auto;
+      margin-right: 2vw;
+      height: 11.9vw;
+      width: 1.5vw;
+    }
+
+    @include mobile() {
+      margin-left: 0;
+      height: 18.5vw;
+      width: 7px;
+      
+      
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    width: 100%;
+    font-size: 1.9vw;
+    font-weight: 700;
+
+    color: #222222;
+    display: flex;
+
+    @include tablet(1024px) {
+      @include font(19px, 30px, 700);
+    }
+
+    @include desktop() {
+      @include font(32px, 48px, 700);
+    }
+
+    @include tablet() {
+      font-size: 2.47vw;
+      line-height: 3.9vw;
+      letter-spacing: normal;
       font-weight: 700;
-      line-height: 38px;
-      color: #222222;
-      display: flex;
+      transform: scale(1,1);
     }
-  
-    &__subtitle::after {
-      display: contents;
-      content: " fashion";
-      color: $dark-pink;
-    }
-  
-    &__subtitle--pink {
-      color: $dark-pink;
-    }
-  
-    &__man-img {
-      margin: 0 140px 0 0;
-    }
-  
-    &__man-wrap {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: end;
-      max-width: 800px;
+    @include mobile {
+      line-height: 9.4vw;
+      font-size: 6vw;
       width: 100%;
     }
   }
+
+  &__subtitle::after {
+    display: contents;
+    content: " fashion";
+    color: $dark-pink;
+  }
+
+  &__man-img {
+    display: flex;
+    width: 33.5%;
+
+    @include mobile() {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+
+  &__man-wrap {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    display: block;
+  }
+}

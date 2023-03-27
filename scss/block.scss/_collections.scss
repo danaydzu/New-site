@@ -1,0 +1,138 @@
+.collections {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet(){
+      padding: 0 2vw;
+
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #f16d7f;
+    margin-bottom: 12px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 63px;
+      height: 3px;
+      background: #f16d7f;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid $pink;
+    padding-bottom: 65px;
+  }
+  &__heading {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #4d4d4d;
+    margin-bottom: 48px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #5e5e5e;
+    opacity: 0.7;
+    
+
+    &::after {
+      display: block;
+      content: "$561";
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+
+      color: #ef5b70;
+      margin-top: 32px;
+    }
+  }
+  &__button {
+    margin-top: 48px;
+    &-svg {
+      fill: none;
+      &--color {
+        fill: $dark-pink;
+        &-stroke {
+          stroke: $dark-pink;
+          stroke-linejoin: round;
+        }
+      }
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 0;
+
+  }
+
+  &__list{
+    display: flex;
+    max-width: 470px;
+    width: 100%;
+    justify-content: space-between;
+
+
+  }
+  &__item {
+    display: flex;
+    cursor:pointer;
+    transition: transform .5s;
+    &:hover{
+      transform: scale(1.1,1.1);
+    }
+
+
+
+    &-text {
+        text-align: end;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #6f6e6e;
+      margin-right: 9px;
+      cursor: pointer;
+      @include tablet(){
+        font-size: 12px;
+        margin-right: 7px;
+        
+
+      }
+      @include mobile(){
+        width: min-content;
+   
+
+      }
+    }
+
+
+
+  }
+}

@@ -6,28 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>demo</title>
   <script defer src="../js/header.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
+
 </head>
 
 
 <body>
 
-  <header class="header">
+  <header class="header ">
     <div class="container">
-      <div class="header__wrapaper">
-        <div class="header__controls">
-          <img class="header__logo" src="/img/logo.svg" alt="logo" width="44" height="38">
-          <img src="/img/search.svg" alt="search" width="26" height="27">
+      <div class="header__wrapaper ">
+        <div class="header__controls header__controls--logo">
+          <a href="index.html"><img class="header__logo" src="../img/logo.svg" alt="logo" width="44" height="38"></a>
+          <img src="../img/search.svg" alt="search" width="26" height="27">
         </div>
         <div class="header__controls">
           <button id="burger" class="header__menu-button">
-            <img src="/img/menu.svg" alt="menu" width="26" height="27">
+            <img src="../img/menu.svg" alt="menu" width="26" height="27">
           </button>
-          <a class="header__person-link" href="/html/registration.html"><img src="/img/person.svg" alt="person"
-              width="26" height="27"></a>
+          <a class="header__person-link" href="registration.html"><img src="../img/person.svg" alt="person" width="26"
+              height="27"></a>
 
-          <a class="header__backet-link" href="#"><img src="/img/backet.svg" alt="backet" width="26" height="27"></a>
+          <a class="header__basket-link" href="cart.html"><img src="../img/backet.svg" alt="basket" width="26"
+              height="27"></a>
         </div>
 
 
@@ -35,7 +39,7 @@
 
     </div>
     <nav class="navigation">
-      <button id="cross" class="navigation__button-cross"> <img class="navigation__cross" src="/img/cross.svg" alt="x"
+      <button id="cross" class="navigation__button-cross"> <img class="navigation__cross" src="../img/cross.svg" alt="x"
           width="12" height="12">
       </button>
 
@@ -77,22 +81,21 @@
   <main class="main">
     <section class="brand">
       <div class="container container--large">
-        <div class="brand__man-wrap">
-          <img class="brand__man-img" src="/img/man__main_top.png" alt="man" width="" height="">
-
-        </div>
+        <!-- <div class="brand__man-wrap"> -->
+        <img class="brand__man-img" src="../img/man__main_top.png" alt="man" width="" height="">
+        <!-- 
+        </div> -->
 
         <div class="brand__title-wrapaper">
           <h1 class="brand__title">the brand <span class="brand__subtitle"> of luxerious </span>
           </h1>
         </div>
-        <!-- <span class="brand__subtitle brand__subtitle--pink"> fashion</span> -->
       </div>
     </section>
 
-    <section class="offers container ">
+    <section class="offers ">
       <h2 class="offers__title">Offers</h2>
-      <ul class="offers__list">
+      <ul class="offers__list container ">
         <li class="offers__item offers__item-1">
           <div class="decoration"></div>
           <h3 class="offers__heading">30% off</h3>
@@ -141,7 +144,7 @@
                 </svg>
 
               </div>
-              <img class="products__img" src="/img/ELLERY X M'O CAPSULE man.png" alt="man">
+              <img class="products__img" src="../img/ELLERY X M'O CAPSULE man.png" alt="man">
             </div>
             <div class="products__item-body">
               <h3 class="products__heading">ellery x m'o capsule</h3>
@@ -169,7 +172,7 @@
                 </svg>
 
               </div>
-              <img src="/img/ELLERY X M'O CAPSULE woman.png" alt="">
+              <img class="products__img" src="../img/ELLERY X M'O CAPSULE woman.png" alt="">
             </div>
 
             <div class="products__item-body">
@@ -198,7 +201,7 @@
                 </svg>
 
               </div>
-              <img src="/img/man_2.jpg" alt="">
+              <img class="products__img" src="../img/man_2.jpg" alt="">
             </div>
             <div class="products__item-body">
               <h3 class="products__heading">ellery x m'o capsule</h3>
@@ -226,7 +229,7 @@
                 </svg>
 
               </div>
-              <img src="/img/ELLERY X M'O CAPSULE man_3.png" alt="">
+              <img class="products__img" src="../img/ELLERY X M'O CAPSULE man_3.png" alt="">
             </div>
             <div class="products__item-body">
               <h3 class="products__heading">ellery x m'o capsule</h3>
@@ -254,7 +257,7 @@
                 </svg>
 
               </div>
-              <img src="/img/ELLERY X M'O CAPSULE woman_2.png" alt="">
+              <img class="products__img" src="../img/ELLERY X M'O CAPSULE woman_2.png" alt="">
             </div>
             <div class="products__item-body">
               <h3 class="products__heading">ellery x m'o capsule</h3>
@@ -282,7 +285,7 @@
                 </svg>
 
               </div>
-              <img src="/img/ELLERY X M'O CAPSULE woman_3.png" alt="">
+              <img class="products__img" src="../img/ELLERY X M'O CAPSULE woman_3.png" alt="">
             </div>
             <div class="products__item-body">
               <h3 class="products__heading">ellery x m'o capsule</h3>
@@ -307,19 +310,19 @@
         <h2 class="benefits__title">Additional benefits</h2>
         <ul class="benefits__list">
           <li class="benefits__item">
-            <img src="/img/truck.svg" alt="truck" height="40" width="45">
+            <img src="../img/truck.svg" alt="truck" height="40" width="45">
             <h3 class="benefits__heading">Free Delivery</h3>
             <p class="benefits__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
               extensive models.</p>
           </li>
           <li class="benefits__item">
-            <img src="/img/sale.svg" alt="sale" height="40">
+            <img src="../img/sale.svg" alt="sale" height="40">
             <h3 class="benefits__heading">Sales & discounts</h3>
             <p class="benefits__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
               extensive models.</p>
           </li>
           <li class="benefits__item">
-            <img src="/img/crown.svg" alt="crown" height="40" width="45">
+            <img src="../img/crown.svg" alt="crown" height="40" width="45">
             <h3 class="benefits__heading">Quality assurance</h3>
             <p class="benefits__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
               extensive models.</p>
@@ -335,7 +338,7 @@
         <div class="footer__feedback">
           <h2 class="footer__heading footer__heading--hidden">information and Subscribe </h2>
 
-          <img src="/img/footer__woman.svg" alt="woman" height="96" width="96">
+          <img src="../img/footer__woman.svg" alt="woman" height="96" width="96">
           <p class="footer__text-message">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
             condimentum“</p>
         </div>
@@ -362,10 +365,10 @@
 
         <p class="footer__copy"> &copy; 2021 Brand All Rights Reserved.</p>
         <ul class="footer__list">
-          <li class="footer__item"><a href="#"><img src="/img/facebook.svg" alt="facebook"></a></li>
-          <li class="footer__item"><a href="#"><img src="/img/instagram.svg" alt="instagram"></a></li>
-          <li class="footer__item"><a href="#"><img src="/img/pinterest.svg" alt="pinterest"></a></li>
-          <li class="footer__item"><a href="#"><img src="/img/twitter.svg" alt="twitter"></a></li>
+          <li class="footer__item"><a href="#"><img src="../img/facebook.svg" alt="facebook"></a></li>
+          <li class="footer__item"><a href="#"><img src="../img/instagram.svg" alt="instagram"></a></li>
+          <li class="footer__item"><a href="#"><img src="../img/pinterest.svg" alt="pinterest"></a></li>
+          <li class="footer__item"><a href="#"><img src="../img/twitter.svg" alt="twitter"></a></li>
         </ul>
 
 

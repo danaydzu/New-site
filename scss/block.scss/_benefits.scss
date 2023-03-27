@@ -2,12 +2,25 @@
     display: flex;
     background: $dark-blue;
     padding: 103px 0;
+    @include tablet(){
+      padding: 0 0 64px 0;
+    }
+
   
     &__list {
       display: flex;
       margin: 0 auto;
       align-items: center;
       justify-content: space-between;
+      @include tablet(){
+        flex-direction: column;
+        justify-content: space-between
+  
+  
+      }
+      @include mobile(){
+        padding: 0 4vw 0;
+      }
     }
   
     &__title {
@@ -18,7 +31,12 @@
       max-width: 360px;
       width: 100%;
       text-align: center;
+      @include tablet(){
+        margin-top: 48px;
+
+      }
     }
+    
     &__heading {
       margin-top: 28px;
       font-style: normal;
@@ -26,6 +44,7 @@
       font-size: 19.96px;
       line-height: 24px;
       color: #fbfbfb;
+ 
     }
   
     &__text {
