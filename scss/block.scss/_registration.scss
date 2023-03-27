@@ -1,4 +1,6 @@
 .registration {
+  letter-spacing: normal;
+
   &__title {
     font-weight: 300;
     font-size: 24px;
@@ -6,12 +8,64 @@
     /* identical to box height */
     text-transform: uppercase;
     color: #f16d7f;
+    @include mobile(){
+      display: flex;
+      justify-content: center;
+
+
+    }
+    &--links{
+      display: flex;
+      justify-content: space-between;
+      @include mobile(){
+        flex-direction: column;
+        align-items: center;
+
+      }
+    }
+
+
+    &--tablet{
+      @include tablet(){
+        font-size: 3.1vw;
+
+
+      }
+      @include tablet(580px){
+        font-size: 18px;
+
+      }
+
+    }
+  }
+
+
+  &__item-link{
+    display: flex;
+    align-items: center;
+   
+
+    
+
   }
   &__title-wrap {
+
     padding-top: 59px;
     min-height: 148px;
 
     background: #f8f3f4;
+    @include tablet(){
+      padding: 59px 2vw 0;
+
+    }
+    @include mobile(){
+
+      padding: 59px 0 0;
+      
+
+
+    }
+
   }
   &__fields-heading,
   &__check-heading {
@@ -23,30 +77,69 @@
     padding-bottom: 96px;
     display: flex;
     justify-content: space-between;
+    @include tablet(){
+      max-width: none;
+      margin: 0;
+      padding: 40px 2vw 0 ;
+
+    } 
+    @include mobile(){
+      flex-direction: column;
+      padding: 0px 4vw 0;
+    }
   }
 
   &__fields {
     max-width: 360px;
     display: flex;
     flex-direction: column;
+    @include mobile(){
+
+      margin-bottom: 40px;
+
+    }
 
     &-mini-heading {
       font-weight: 200;
-      font-size: 18px;
+      font-size: 15.5px;
       line-height: 19px;
       margin-bottom: 20px;
       color: #222222;
+      @include tablet(){
+        margin-bottom: 2.8vw;
+        font-size: 2vw;
+
+      }
+      @include tablet(652px){
+        font-size: 13px;
+
+
+      }
+      @include mobile(){
+        margin-bottom: 20px;
+        font-size: 15.5px;
+      }
     }
 
     &-input {
       font-family: "Lato";
       padding: 14px 17px;
-      margin-bottom: 36px;
+      margin-bottom: 20px;
       border: 1px solid #f1e4e6;
       font-weight: 200;
       font-size: 13px;
       line-height: 16px;
       color: #222222;
+      border: 1px solid #A4A4A4;
+      @include tablet(){
+        margin-bottom: 2.8vw;
+        padding: 1.8vw 2.2vw;
+
+      }
+      @include mobile(){
+        margin-bottom: 20px;
+        padding: 14px 17px;
+      }
     }
     &-input:focus,
     &-input:hover {
@@ -67,17 +160,26 @@
       height: 12px;
       margin-right: 12px;
       background-color: rgb(255, 255, 255);
-      border: 1px solid #f1e4e6;
+      border: 1px solid #A4A4A4;
       border-radius: 50px;
     }
 
     &-radio:checked + &-label::before {
-      background-image: url(/img/Vector.svg);
+      background-image: url(../img/Vector.svg);
       background-size: cover;
     }
     &-radio-wrap {
       display: flex;
       margin-bottom: 34px;
+      margin-top: 14px;
+      @include tablet(){
+        margin: 2vw 0 4.6vw 0;
+
+      }
+      @include mobile(){
+        margin-bottom: 34px;
+        margin-top: 14px;
+      }
     }
     &-label {
       display: flex;
@@ -96,12 +198,21 @@
       font-size: 13px;
       line-height: 16px;
       margin-bottom: 39px;
+      
+      @include tablet(){
+        margin-bottom: 5.6vw;
+        font-size: 12px;
+      }
+      @include mobile(){
+        font-size: 13px;
+        margin-bottom: 39px;
+      }
     }
 
     &-btn::after {
       content: "  ";
       margin-left: 20px;
-      background-image: url(/img/arrow.svg);
+      background-image: url(../img/arrow.svg);
       background-size: contain;
       background-repeat: no-repeat;
       width: 17px;
@@ -122,34 +233,124 @@
       /* identical to box height */
 
       color: #ffffff;
+      @include tablet(){
+        padding: 2vw 3vw 2vw 3.8vw;
+        font-size: 12px;
+
+      }
+      @include mobile(){
+        font-size: 14px;
+        line-height: 17px;
+        padding: 16px 24px 16px 29px;
+      }
     }
   }
 
   &__check {
+    letter-spacing: normal;
     display: flex;
     flex-direction: column;
     max-width: 652px;
+    margin-left: auto;
+    @include tablet(){
+      margin-left: 20px;
+
+    }
+    @include tablet(1599px){
+      max-width: 34vw;
+
+    }
+    @include tablet(1024px){
+      max-width: 350px;
+
+
+    }
+    @include mobile(){
+      max-width: none;
+      margin-left: 0;
+    }
+
     &-mini-heading {
       font-style: normal;
-      font-weight: 200;
+      font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      /* identical to box height */
+      
       margin-bottom: 22px;
       text-transform: uppercase;
-      color: #000000;
+      
+      @include tablet(1599px){
+        @include font(1.5vw,1.81vw,400);
+
+      }
+      @include tablet(1024px){
+        @include font(15.5px,18.5px,600);
+
+      }
+      @include tablet(){
+        margin-bottom: 2.8vw;
+        font-size: 2vw;
+      }
+      @include tablet(652px){
+        font-size: 13px;
+
+
+      }
+      @include mobile(){
+   
+          @include font(15.5px,18.5px,400);
+        
+        margin-bottom: 32px;
+      }
+
     }
     &-text {
       font-weight: 200;
       font-size: 24px;
       line-height: 29px;
 
-      color: #000000;
+      
       margin-bottom: 21px;
+      @include tablet(1599px){
+        @include font(1.5vw,1.81vw,300);
+
+      }
+
+
+      @include tablet(1024px){
+        @include font(15.5px,18.5px,300);
+
+      }
+      @include tablet(){
+        margin-bottom: 2.8vw;
+
+          font-size: 2vw;
+ 
+      }
+      @include tablet(652px){
+        font-size: 12px;
+
+
+      }
+      @include mobile(){
+   
+        @include font(15.5px,18.5px,300);
+      
+        margin-bottom: 21px;
+    }
     }
 
     &-wrap {
       margin-bottom: 16px;
+      @include tablet(){
+        margin-bottom: 2vw;
+
+      }
+      @include mobile(){
+        margin-bottom: 16px;
+
+      }
+      
     }
 
     &-label {
@@ -157,8 +358,34 @@
       font-weight: 200;
       font-size: 24px;
       line-height: 29px;
+      
+      
+      @include tablet(1599px){
+        @include font(1.5vw,1.81vw,300);
 
-      color: #000000;
+      }
+      
+      @include tablet(1024px){
+        @include font(15.5px,18.5px,300);
+        
+
+      }
+      @include tablet(){
+        font-size: 2vw;
+       
+      }
+      @include tablet(652px){
+        font-size: 12px;
+
+
+      }
+      @include mobile(){
+   
+        @include font(15.5px,18.5px,300);
+      
+      
+    }
+
     }
 
     &-input {
@@ -166,27 +393,62 @@
     }
     &-input:checked + &-label::before {
       content: "";
-      margin: auto 12px 0 0;
+      margin: auto 12px auto 0;
       background-repeat: no-repeat;
       height: 16px;
       width: 20px;
 
-      background-image: url(/img/Vector.svg);
+      background-image: url(../img/Vector.svg);
+      @include tablet(){
+        height: 1.5vw;
+        width: 2.6vw;
+        background-size: contain;
+
+
+      }
+      @include tablet(652px){
+        width: 14px;
+        height: 8px;
+
+
+      }
+      @include mobile(){
+   
+        height: 12px;
+        width: 16px;
+      
+      
+    }
     }
   }
+  &__list-links{
+    display: flex;
+
+  }
+  &__link{
+    text-decoration: none;
+    transition: color .5s;
+    &:hover{
+      color: $dark-pink;
+
+    }
+
+  }
+
 }
 
 .decoration__add {
   display: none;
+  transition: fill .8s;
 }
 
 .decoration:hover .decoration__add {
   display: block;
-  fill: none;
+  fill: rgba(255, 255, 255, 0.13);
   &--color {
-    fill: $pink;
+    fill: $dark-pink;
     &-stroke {
-      stroke: $pink;
+      stroke: $dark-pink;
       stroke-linejoin: round;
     }
   }
@@ -197,13 +459,19 @@
   transform: translate(-50%, -50%);
 
   &:hover {
+    transition: fill .8s;
     fill: rgb(255, 255, 255);
     &--color {
       fill: $pink;
+  
+
       &-stroke {
+
         stroke: $pink;
         stroke-linejoin: round;
       }
     }
+
+    
   }
 }

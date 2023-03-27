@@ -1,4 +1,5 @@
 {
-  "compile-hero.disable-compile-files-on-did-save-code": true,
-  "liveSassCompile.settings.autoprefix": []
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "liveSassCompile.settings.autoprefix": [],
+  "vscode-devtools-for-chrome.port": 5555
 }

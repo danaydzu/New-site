@@ -14,7 +14,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header ">
     <div class="container">
       <div class="header__wrapaper ">
         <div class="header__controls header__controls--logo">
@@ -78,106 +78,109 @@
   </header>
   <main class="main">
 
-    <section class="registration">
+    <section class="cart">
       <div class="registration__title-wrap">
-        <h1 class="registration__title container">Registration</h1>
+        <h1 class="registration__title container">SHOPPING CART</h1>
+      </div>
+
+      <div class="cart__wrap">
+        <div class="container container--flex-beetwen">
+          <div class="cart__card-wrap">
+            <h2 class="cart__heading">your purchases</h2>
+            <div class="cart__card">
+              <img class="cart__card-img" src="../img/man_2.jpg" alt="" width="262" height="306">
+
+              <div class="cart__card-body">
+                <button id="card__cross" class="cart__cross"> <img class="cart__cross-img" src="../img/cross.svg"
+                    alt="x" width="12" height="12">
+                </button>
+                <h3 class="cart__heading-mini">
+                  MANGO PEOPLE
+                </h3>
+                <p class="cart__card-text">Price: <span class="cart__card-span"> $300</span> </p>
+                <p class="cart__card-text">Color: Red</p>
+                <p class="cart__card-text">Size: Xl </p>
+                <div class="cart__box-input">
+                  <p class="cart__card-text">Quantity:</p>
+                  <input value="1" min="0" type="number" class="cart__card-input">
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="cart__card">
+              <img class="cart__card-img" src="../img/card-2.jpg" alt="" width="262" height="306">
+              <div class="cart__card-body">
+                <button id="card__cross2" class="cart__cross"> <img class="cart__cross-img" src="../img/cross.svg"
+                    alt="x" width="12" height="12">
+                </button>
+                <h3 class="cart__heading-mini">
+                  MANGO PEOPLE 
+                </h3>
+                <p class="cart__card-text">Price: <span class="cart__card-span"> $300</span> </p>
+                <p class="cart__card-text">Color: Red</p>
+                <p class="cart__card-text">Size: Xl </p>
+                <div class="cart__box-input">
+                  <p class="cart__card-text">Quantity: </p>
+                  <input value="1" min="0" type="number" class="cart__card-input">
+
+
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="cart__card-box">
+              <button type="reset" class="cart__card-button">CLEAR SHOPPING CART </button>
+              <a class="cart__card-button">CONTINUE SHOPPING</a>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="order">
+            <form action="#" class="order__form">
+              <h2 class="order__heading">
+                SHIPPING ADRESS
+              </h2>
+              <input class="order__input registration__fields-input" type="text" placeholder="Bangladesh">
+              <input class="order__input registration__fields-input" type="text" placeholder="State">
+              <input class="order__input registration__fields-input" type="text" placeholder="Postcode / Zip">
+
+              <button class="order__btn">
+                GET A QUOTE
+              </button>
+
+            </form>
+
+            <div class="order__checkpoint">
+              <p class="order__checkpoint-text">SUB TOTAL <span
+                  class="order__checkpoint-summ order__checkpoint-summ--gray">$900</span></p>
+              <h2 class="order__checkpoint-heading">GRAND TOTAL <span class="order__checkpoint-summ">$900</span></h2>
+              <a class="cart__card-button order__checkpoint-btn ">PROCEED TO CHECKOUT</a>
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+
+
 
       </div>
-      <div class="registration__wrap container">
-        <form action="#" class="registration__fields">
-          <h2 class="registration__fields-heading">
-            Input fields.
-          </h2>
-          <h3 class="registration__fields-mini-heading">
-            YOUR NAME
-
-          </h3>
-          <input class="registration__fields-input" type="text" placeholder="First Name">
-          <input class="registration__fields-input" type="text" placeholder="Last Name">
-
-          <div class="registration__fields-radio-wrap">
-            <input class="registration__fields-radio" type="radio" id="male" name="pink">
-            <label class="registration__fields-label" for="male"> Male</label>
-            <input class="registration__fields-radio" type="radio" id="female" name="pink">
-            <label class="registration__fields-label" for="female"> Female</label>
-          </div>
-          <!-- <div class="registration__fields-radio-wrap">
-          <input class="registration__fields-radio" type="radio" id="female" name="pink">
-          <label class="registration__fields-label" for="female"> Female</label>
-          </div> -->
-          <h3 class="registration__fields-mini-heading">
-            LOGIN DETAILS
-
-          </h3>
-          <input class="registration__fields-input" type="email" placeholder="Email">
-          <input class="registration__fields-input" type="password" placeholder="Password">
-
-          <p class="registration__fields-text">
-            Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase
-            letters
-          </p>
-
-          <button class="registration__fields-btn">
-            join now
-          </button>
-        </form>
-        <form action="#" class="registration__check">
-          <h2 class="registration__check-heading">
-            Check-box discount
-
-          </h2>
-          <h3 class="registration__check-mini-heading">
-            loyalty has its perks
-          </h3>
-          <p class="registration__check-text">
-            Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
-            these as soon as you join:
-          </p>
-
-          <div class="registration__check-wrap">
-            <input type="checkbox" class="registration__check-input" id="mark-1">
-            <label class="registration__check-label" for="mark-1">
-              15% off welcome offer
-
-            </label>
-          </div>
-          <div class="registration__check-wrap">
-            <input type="checkbox" class="registration__check-input" id="mark-2">
-            <label class="registration__check-label" for="mark-2">
-              Free shipping, returns and exchanges on all orders
-
-
-            </label>
-          </div>
-          <div class="registration__check-wrap">
-            <input type="checkbox" class="registration__check-input" id="mark-3">
-            <label class="registration__check-label" for="mark-3">
-              $10 off a purchase on your birthday
-
-
-            </label>
-          </div>
-          <div class="registration__check-wrap">
-            <input type="checkbox" class="registration__check-input" id="mark-4">
-            <label class="registration__check-label" for="mark-4">
-              Early access to products
-            </label>
-          </div>
-          <div class="registration__check-wrap">
-            <input type="checkbox" class="registration__check-input" id="mark-5">
-
-            <label class="registration__check-label" for="mark-5">
-              Exclusive offers & rewards
-            </label>
 
 
 
-
-          </div>
-
-        </form>
-
-      </div>
     </section>
   </main>
   <footer class="footer">

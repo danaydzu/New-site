@@ -1,4 +1,13 @@
 .offers {
+  @include tablet(){
+    padding: 0 2%;
+
+  }
+
+  @include mobile(){
+    padding: 0 4.2%
+  }
+
     &__title {
       @extend %visually-hidden;
     }
@@ -6,6 +15,7 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      
       flex: 0 0 auto;
       justify-content: space-between;
       margin-bottom: 96px;
@@ -13,37 +23,83 @@
   
     &__item {
       position: relative;
-      min-height: 260px;
-      width: 360px;
+
       background-color: #c4c4c4;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-style: normal;
-      background-size: cover;
-  
+      font-style: normal; 
+
+      flex-basis: 31%;
       text-transform: uppercase;
-  
+      min-height: 16vw;
+      background-position: center;
+      background-size: cover;  
       -webkit-font-smoothing: auto;
       -moz-osx-font-smoothing: auto;
+
+
   
-      color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255 );
+      @include desktop(){
+        min-height: 256px;
+      }
+      @include tablet(1024px){
+        min-height: 163px;
+        width: 326px;
+        
+      }
+
+      @include tablet(){
+        flex-basis:32%;
+        min-height: 20.4vw;
+        width: 100%;
+      }
+
+      @include mobile(){
+        flex-basis:100%;
+        min-height: 65vw;
+      }
   
       &-1 {
         background-image: $offers__item-1_backround;
+        
+   
       }
   
       &-2 {
         background-image: $offers__item-2_backround;
+        @include mobile(){
+          margin-top: 8.5vw;
+        }
       }
       &-3 {
         background-image: $offers__item-3_backround;
+        @include mobile(){
+          margin-top: 8.5vw;
+        }
       }
       &-4 {
-        margin: 30px 0 0 0;
+        margin: 2.5vw 0 0 0;
+        
         background-image: $offers__item-4_backround;
-        width: 100%;
+
+        flex-basis: 100%;
+        @include desktop(){
+          margin-top: 40px;
+
+        }
+        @include tablet(){
+          margin-top: 1.875vw;
+        }
+        @include mobile(){
+          margin-top:8.5vw;
+        
+        
+          min-height: 32.5vw;
+        }
+
       }
     }
   
@@ -61,17 +117,71 @@
     &__heading {
       color: rgb(255, 255, 255);
   
-      font-size: 16px;
+      font-size: 1vw;
       font-weight: 300;
       line-height: 19px;
+      z-index: 2;
+      @include desktop(){
+        font-size: 16px;
+
+
+
+      }
+      @include tablet(1024px){
+        font-size: 12px;
+
+      }
+      @include tablet(){
+        font-size: 1.56vw;
+
+      }
+      @include mobile(){
+        font-size: 16px;
+
+
+      }
+      
+
+      
     }
   
     &__text {
-      font-size: 24px;
+      font-size: 1.5vw;
       font-weight: 500;
-      line-height: 28.8px;
+      line-height: 1.8vw;
       color: $dark-pink;
       letter-spacing: 0.55px;
+      @include tablet(1205px){
+        font-size: 18px;
+
+      }
+
+
+      @include tablet(){
+        font-size: 2.3vw;
+        line-height: 20.8px;
+      }
+      
+      @include desktop(){
+        font-size: 24px;
+        line-height: 28.8px;
+        
+
+
+      }
+      @include mobile(){
+        font-size: 24px;
+        line-height: 28.8px;
+
+      }
     }
   }
-  
+  .decoration{
+    color: #f1e4e6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    transition: background-color .5ms;
+  }

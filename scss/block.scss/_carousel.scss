@@ -1,0 +1,42 @@
+.mg-auto{
+    margin: 0 auto;
+
+}
+.pos-center{
+    top: 50%;
+    transform: translateY(-50%);
+
+
+}
+.fs-14{
+    font-size: 14px;
+}
+.color-pink{
+    color: $dark-pink;
+    font-weight: 300;
+
+}
+.color-gray{
+
+    color:#636363;
+
+}
+.carousels-s{
+    padding-bottom: 30px;
+
+}
+.size-tablet{
+    @include tablet(){
+        width: 10vw;
+        height: 10vw;
+
+
+    }
+}
+
+.fs-tablet-12{
+    @include tablet(){
+        font-size: 12px;
+  
+      }
+}
